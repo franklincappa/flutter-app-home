@@ -13,22 +13,37 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Container(
         margin: EdgeInsets.only(top: 10),
-        padding: EdgeInsets.all(10),
+        //padding: EdgeInsets.all(10),
         width: double.infinity,
         height: 350,
         decoration: const BoxDecoration(color: Colors.white),
         child: Container(
-          padding: EdgeInsets.all(5),
-          child: Row(
+          //padding: EdgeInsets.all(5),
+          child: Column(
             children: [
-              CircleAvatar(child: Text("FC")),
-              SizedBox(width: 10),
-              Text(
-                "Franklin Cappa",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                  color: const Color.fromARGB(255, 5, 95, 151),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: const Row(
+                  children: [
+                    CircleAvatar(child: Text("FC")),
+                    SizedBox(width: 10),
+                    Text(
+                      "Franklin Cappa",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: const Color.fromARGB(255, 5, 95, 151),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 250,
+                child: Image.network(
+                  "https://manaosoftware.com/wp-content/uploads/2023/08/why-use-flutter.jpg",
+                  fit: BoxFit.cover,
                 ),
               ),
             ],
