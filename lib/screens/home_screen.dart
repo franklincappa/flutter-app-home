@@ -12,12 +12,28 @@ class HomeScreen extends StatelessWidget {
         foregroundColor: Colors.white,
       ),
       body: Container(
-        margin: EdgeInsets.only(top: 20),
-        padding: EdgeInsets.all(20),
+        margin: EdgeInsets.only(top: 10),
+        padding: EdgeInsets.all(10),
         width: double.infinity,
         height: 350,
         decoration: const BoxDecoration(color: Colors.white),
-        child: const Text("Hola"),
+        child: Container(
+          padding: EdgeInsets.all(5),
+          child: Row(
+            children: [
+              CircleAvatar(child: Text("FC")),
+              SizedBox(width: 10),
+              Text(
+                "Franklin Cappa",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: const Color.fromARGB(255, 5, 95, 151),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
 
       backgroundColor: Colors.grey[300],
